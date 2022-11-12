@@ -6,13 +6,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import requests
 
-
-
 app = Flask(__name__,template_folder="templates") 
 
 model=load_model('nutrition.h5')
 print("Loaded model from disk")
-
 
 @app.route('/')
 def home():
